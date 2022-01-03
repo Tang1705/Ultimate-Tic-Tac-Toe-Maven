@@ -5,6 +5,7 @@
 
 package edu.bjtu.tictactoe.client_side.windows;
 
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -24,6 +25,7 @@ public class LocalGameGUI extends Application {
     private static ArrayList<GameButton> buttonArrayList = new ArrayList<GameButton>();
     private static GridPane gridPane;
     private static boolean win = true;
+    private MediaPlayer player;
 
     public void start(Stage primaryStage) throws Exception {
 
@@ -60,15 +62,16 @@ public class LocalGameGUI extends Application {
         gridPane.add(gameButtons[2][1], 1, 2);
         gridPane.add(gameButtons[2][2], 2, 2);
 
-
-        String url = String.valueOf(this.getClass().getResource("/sound/child.wav"));
-        Media media = new Media(url);
-        MediaPlayer player = new MediaPlayer(media);
+        Media media = new Media(Paths.get("src/main/resources/sound/child.wav").toUri().toString());
+        player = new MediaPlayer(media);
         player.setAutoPlay(true);
         player.setCycleCount(20);
-        player.play();
-
-
+        player.setOnReady(new Runnable() {
+            @Override
+            public void run() {
+                player.play();
+            }
+        });
 
         primaryStage.getIcons().add(new Image("http://static.zybuluo.com/TangWill/du4235tohjaap56iakth6e32/icon.jpg"));
         gridPane.setPadding(new Insets(70.0D, 200.0D, 200.0D, 350.0D));

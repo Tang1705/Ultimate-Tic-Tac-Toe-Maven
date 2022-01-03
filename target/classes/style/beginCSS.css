@@ -4,7 +4,7 @@
 * */
 
 .root {
-    -fx-background-image: url("/tictactoe/client_side/style/1.jpg");
+    -fx-background-image: url("/image/1.jpg");
 }
 
 .label {
@@ -101,7 +101,7 @@
     -fx-border-color: #e2e2e2;
     -fx-border-width: 2;
     -fx-background-radius: 0;
-    -fx-background-image: url("/tictactoe/client_side/style/1.jpg");
+    -fx-background-image: url("/image/1.jpg");
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;
     -fx-text-fill: #d8d8d8;
@@ -123,5 +123,5 @@
 }
 
 #waitPane {
-    -fx-background-image: url("wait.PNG");
+    -fx-background-image: url("/image/wait.PNG");
 }
