@@ -62,7 +62,8 @@ public class LocalGameGUI extends Application {
         gridPane.add(gameButtons[2][1], 1, 2);
         gridPane.add(gameButtons[2][2], 2, 2);
 
-        Media media = new Media(Paths.get("src/main/resources/sound/child.wav").toUri().toString());
+        String url = this.getClass().getResource("/sound/child.wav").toString();
+        Media media = new Media(url);
         player = new MediaPlayer(media);
         player.setAutoPlay(true);
         player.setCycleCount(20);
