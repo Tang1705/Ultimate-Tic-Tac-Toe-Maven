@@ -9,8 +9,8 @@ import java.sql.*;
 import java.util.StringTokenizer;
 
 public class Database {
-    String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    String DB_URL = "jdbc:mysql://localhost:3306/RSSREADER?useSSL=false&serverTimezone=UTC";
+    String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+    String DB_URL = "jdbc:mysql://localhost:3306/Ultimate_Tic_Tac_Toe?useSSL=false&serverTimezone=UTC";
     String USER = "root";
     String PASS = "f=gmm/r2";
 
@@ -25,12 +25,12 @@ public class Database {
         try {
             try {
                 Class.forName(this.JDBC_DRIVER);
-                String sql1 = "INSERT INTO userRecord(username,password,telephone,winrecord) values(?,?,?,?)";
+                String sql1 = "INSERT INTO USER(username,password,telephone,winrecord) values(?,?,?,?)";
                 conn = DriverManager.getConnection(this.DB_URL, this.USER, this.PASS);
                 PreparedStatement ps = conn.prepareStatement(sql1);
                 ResultSet rs = null;
                 stmt = conn.createStatement();
-                String sql2 = "SELECT username,password,telephone,winrecord FROM userRecord";
+                String sql2 = "SELECT username,password,telephone,winrecord FROM USER";
                 rs = stmt.executeQuery(sql2);
                 StringTokenizer stringTokenizer = new StringTokenizer(info, "~", false);
                 String op = stringTokenizer.nextToken();

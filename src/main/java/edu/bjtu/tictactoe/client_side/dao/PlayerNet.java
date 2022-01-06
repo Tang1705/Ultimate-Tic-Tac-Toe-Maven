@@ -16,7 +16,7 @@ public class PlayerNet {
 
     public PlayerNet(){
         try {
-            socket=new Socket("192.168.43.62",5618);
+            socket=new Socket("127.0.0.1",5618);
             in=new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out=new PrintWriter(socket.getOutputStream(),true);
         } catch (IOException e) {

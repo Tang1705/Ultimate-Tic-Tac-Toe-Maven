@@ -25,18 +25,17 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 import edu.bjtu.tictactoe.client_side.dao.PlayerNet;
-import edu.bjtu.tictactoe.client_side.windows.BeginGUI;
 
 import java.io.PrintWriter;
 
-public class LogInGUI extends Application {
-    public LogInGUI() {
+public class SignUpGUI extends Application {
+    public SignUpGUI() {
     }
 
     public void start(final Stage primaryStage) throws Exception {
-        primaryStage.setTitle("Ultimate Tic-Tac-Toe Log In");
+        primaryStage.setTitle("Ultimate Tic-Tac-Toe Sign Up");
         BorderPane logInWindow = new BorderPane();
-        Scene logInScene = new Scene(logInWindow, 1280.0D, 720.0D);
+        Scene signUpScene = new Scene(logInWindow, 1280.0D, 720.0D);
         GridPane gridPane = new GridPane();
         gridPane.setHgap(20.0D);
         gridPane.setVgap(20.0D);
@@ -53,7 +52,7 @@ public class LogInGUI extends Application {
         Label telephoneLabel = new Label("Telephone");
         final TextField telephoneField = new TextField();
         Button logButton = new Button("OK");
-        usernameLabel.getStylesheets().add(BeginGUI.class.getResource("beginCSS.css").toExternalForm());
+        usernameLabel.getStylesheets().add(SignInGUI.class.getResource("/style/beginCSS.css").toExternalForm());
         GridPane.setHalignment(usernameLabel, HPos.RIGHT);
         gridPane.add(usernameLabel, 0, 0);
         GridPane.setHalignment(passwordLabel, HPos.RIGHT);
@@ -163,7 +162,7 @@ public class LogInGUI extends Application {
                         label.setText("The information you should know:");
                         alert.setTitle("Congratulation");
                         alert.setHeaderText("Successful!");
-                        rule = "You have logged in successfully.";
+                        rule = "You have signed up successfully.";
                         PlayerNet playerNet = new PlayerNet();
                         //BufferedReader in=playerNet.getIn();
                         PrintWriter out = playerNet.getOut();
@@ -185,7 +184,7 @@ public class LogInGUI extends Application {
                 alert.initOwner(primaryStage);
                 alert.showAndWait();
                 if (result == "6" || result.equals("6")) {
-                    BeginGUI beginGUI = new BeginGUI();
+                    SignInGUI beginGUI = new SignInGUI();
                     beginGUI.start(primaryStage);
                 }
 
@@ -195,8 +194,8 @@ public class LogInGUI extends Application {
         logInWindow.setCenter(gridPane);
         primaryStage.getIcons().add(new Image("http://static.zybuluo.com/TangWill/du4235tohjaap56iakth6e32/icon.jpg"));
         gridPane.setPadding(new Insets(250.0D, 200.0D, 120.0D, 350.0D));
-        logInScene.getStylesheets().add(BeginGUI.class.getResource("/style/beginCSS.css").toExternalForm());
-        primaryStage.setScene(logInScene);
+        signUpScene.getStylesheets().add(SignUpGUI.class.getResource("/style/beginCSS.css").toExternalForm());
+        primaryStage.setScene(signUpScene);
         primaryStage.show();
     }
 }

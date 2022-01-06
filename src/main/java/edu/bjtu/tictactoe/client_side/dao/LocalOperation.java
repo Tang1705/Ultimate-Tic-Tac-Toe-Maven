@@ -12,11 +12,11 @@ import java.util.StringTokenizer;
 import javafx.scene.layout.GridPane;
 import edu.bjtu.tictactoe.client_side.component.MyButton;
 import edu.bjtu.tictactoe.client_side.component.GameButton;
-import edu.bjtu.tictactoe.client_side.windows.LocalGameGUI;
+import edu.bjtu.tictactoe.client_side.windows.OfflineModeGUI;
 
 public class LocalOperation implements Operation {
     static int time = 1;
-    private ArrayList<GameButton> arrayList = LocalGameGUI.getButtonArrayList();
+    private ArrayList<GameButton> arrayList = OfflineModeGUI.getButtonArrayList();
     private static ArrayList<Integer[]> judge = new ArrayList();
     private static int[] very = GameButton.getWinAreaNum();
     private static LocalOperation localOperation = null;
@@ -57,7 +57,7 @@ public class LocalOperation implements Operation {
             Integer[] curInteger = (Integer[]) iterator.next();
             if (i == area) {
                 ArrayList<MyButton> arrayList1 = ((GameButton) this.arrayList.get(i)).getButtons();
-                if (((GameButton) this.arrayList.get(i)).getWhite() && ((MyButton) arrayList1.get(num)).getWhite() && LocalGameGUI.getWin()) {
+                if (((GameButton) this.arrayList.get(i)).getWhite() && ((MyButton) arrayList1.get(num)).getWhite() && OfflineModeGUI.getWin()) {
                     Iterator iterator1;
                     boolean full;
                     MyButton curMyButton;
@@ -121,7 +121,7 @@ public class LocalOperation implements Operation {
 
             while (iterator.hasNext()) {
                 GameButton curGameButton = (GameButton) iterator.next();
-                if (LocalGameGUI.getWin()) {
+                if (OfflineModeGUI.getWin()) {
                     if (i == Integer.valueOf(num) - 1) {
                         if (!curGameButton.getWon()) {
                             Iterator anotherIterator = this.arrayList.iterator();
@@ -246,9 +246,9 @@ public class LocalOperation implements Operation {
             winner = 4;
         }
 
-        GridPane gridPane = LocalGameGUI.getGridPane();
+        GridPane gridPane = OfflineModeGUI.getGridPane();
         if (winner != -1) {
-            LocalGameGUI.setWin();
+            OfflineModeGUI.setWin();
             this.setSymbol("0-0");
             switch (winner) {
                 case 1:

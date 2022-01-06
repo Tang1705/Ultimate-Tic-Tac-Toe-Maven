@@ -18,24 +18,24 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import edu.bjtu.tictactoe.client_side.component.NetGameButton;
-import edu.bjtu.tictactoe.client_side.windows.BeginGUI;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Objects;
 
-public class NetGameGUI extends Application {
+public class OnlineModeGUI extends Application {
     private int numOfClient;
-    private static ArrayList<NetGameButton> buttonArrayList = new ArrayList();
+    private static final ArrayList<NetGameButton> buttonArrayList = new ArrayList<NetGameButton>();
     private static GridPane gridPane;
     private static boolean win = true;
-    private BufferedReader in;
-    private PrintWriter out;
+    private final BufferedReader in;
+    private final PrintWriter out;
     private String userName = "";
     private static Button turnNameLabel;
     private static Label turnLabel;
 
-    public NetGameGUI(BufferedReader bufferedReader, PrintWriter printWriter, String name) {
+    public OnlineModeGUI(BufferedReader bufferedReader, PrintWriter printWriter, String name) {
         in = bufferedReader;
         out = printWriter;
         gridPane = new GridPane();
@@ -119,7 +119,7 @@ public class NetGameGUI extends Application {
         primaryStage.getIcons().add(new Image("http://static.zybuluo.com/TangWill/du4235tohjaap56iakth6e32/icon.jpg"));
         gridPane.setPadding(new Insets(70.0D, 200.0D, 200.0D, 350.0D));
         primaryStage.setScene(scene);
-        scene.getStylesheets().add(BeginGUI.class.getResource("/style/operationCSS.css").toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(OnlineModeGUI.class.getResource("/style/operationCSS.css")).toExternalForm());
         primaryStage.show();
 
 

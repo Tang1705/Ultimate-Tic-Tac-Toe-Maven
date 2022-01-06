@@ -20,8 +20,6 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
 import edu.bjtu.tictactoe.client_side.dao.PlayerNet;
-import edu.bjtu.tictactoe.client_side.windows.BeginGUI;
-import edu.bjtu.tictactoe.client_side.windows.WaitGUI;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -97,7 +95,7 @@ public class RoomGUI extends Application {
                     }
 
                     case "0": {
-                        WaitGUI waitGUI = new WaitGUI(playerNet);
+                        WaitingRoomGUI waitGUI = new WaitingRoomGUI(playerNet);
                         try {
                             waitGUI.setUsername(username);
                             waitGUI.setRoomNum(num);
@@ -160,7 +158,7 @@ public class RoomGUI extends Application {
 
         scene.getStylesheets().
 
-                add(BeginGUI.class.getResource("/style/beginCSS.css").
+                add(RoomGUI.class.getResource("/style/beginCSS.css").
 
                         toExternalForm());
         primaryStage.setScene(scene);

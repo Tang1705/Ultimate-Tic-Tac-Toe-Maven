@@ -28,15 +28,13 @@ import javafx.scene.layout.Priority;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import edu.bjtu.tictactoe.client_side.dao.PlayerNet;
-import edu.bjtu.tictactoe.client_side.windows.LanGUI;
-import edu.bjtu.tictactoe.client_side.windows.LogInGUI;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class BeginGUI extends Application {
-    public BeginGUI() {
+public class SignInGUI extends Application {
+    public SignInGUI() {
     }
 
     public void start(final Stage primaryStage) {
@@ -51,17 +49,17 @@ public class BeginGUI extends Application {
         column2.setHgrow(Priority.ALWAYS);
         gridpane.getColumnConstraints().addAll(new ColumnConstraints[]{column1, column2});
         Label usernameLabel = new Label("username");
-        usernameLabel.getStylesheets().add(BeginGUI.class.getResource("/style/beginCSS.css").toExternalForm());
+        usernameLabel.getStylesheets().add(SignInGUI.class.getResource("/style/beginCSS.css").toExternalForm());
         final TextField usernameField = new TextField();
         Label passwordLabel = new Label("Password");
         final PasswordField passwordField = new PasswordField();
-        Button logInButton = new Button("Log In");
-        logInButton.setOnAction(new EventHandler<ActionEvent>() {
+        Button signUpButton = new Button("Sign Up");
+        signUpButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
-                LogInGUI logInGUI = new LogInGUI();
+                SignUpGUI signUpGUI = new SignUpGUI();
 
                 try {
-                    logInGUI.start(primaryStage);
+                    signUpGUI.start(primaryStage);
                 } catch (Exception var4) {
                     var4.printStackTrace();
                 }
@@ -69,8 +67,8 @@ public class BeginGUI extends Application {
             }
         });
 
-        Button signUpButton = new Button("Sign Up");
-        signUpButton.setOnAction(new EventHandler<ActionEvent>() {
+        Button signInButton = new Button("Sign In");
+        signInButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
                 String username = usernameField.getText();
                 String password = String.valueOf(passwordField.getText());
@@ -128,7 +126,7 @@ public class BeginGUI extends Application {
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
-                            LanGUI lanGUI = new LanGUI(username, record);
+                            BeginGameGUI lanGUI = new BeginGameGUI(username, record);
                             try {
                                 in.close();
                                 out.close();
@@ -178,8 +176,8 @@ public class BeginGUI extends Application {
         gridpane.add(passwordField, 1, 1);
         FlowPane flowPane = new FlowPane();
         flowPane.setHgap(40.0D);
-        flowPane.getChildren().add(logInButton);
         flowPane.getChildren().add(signUpButton);
+        flowPane.getChildren().add(signInButton);
         flowPane.setAlignment(Pos.CENTER);
         GridPane.setHalignment(signUpButton, HPos.RIGHT);
         gridpane.add(flowPane, 1, 2);
@@ -194,7 +192,7 @@ public class BeginGUI extends Application {
         mainPane.setPadding(new Insets(80.0D, 200.0D, 120.0D, 350.0D));
         root.setCenter(mainPane);
         primaryStage.getIcons().add(new Image("http://static.zybuluo.com/TangWill/du4235tohjaap56iakth6e32/icon.jpg"));
-        scene.getStylesheets().add(BeginGUI.class.getResource("/style/beginCSS.css").toExternalForm());
+        scene.getStylesheets().add(SignInGUI.class.getResource("/style/beginCSS.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

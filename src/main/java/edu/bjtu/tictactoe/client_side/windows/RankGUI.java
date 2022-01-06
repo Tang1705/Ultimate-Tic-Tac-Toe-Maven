@@ -15,8 +15,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
 import edu.bjtu.tictactoe.client_side.dao.Rank;
-import edu.bjtu.tictactoe.client_side.windows.BeginGUI;
-import edu.bjtu.tictactoe.client_side.windows.MainGUI;
 
 public class RankGUI extends Application {
     @Override
@@ -87,7 +85,7 @@ public class RankGUI extends Application {
 
         gridPane.setPadding(new Insets(200, 400, 200, 450));
 
-        scene.getStylesheets().add(BeginGUI.class.getResource("/style/beginCSS.css").toExternalForm());
+        scene.getStylesheets().add(RankGUI.class.getResource("/style/beginCSS.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

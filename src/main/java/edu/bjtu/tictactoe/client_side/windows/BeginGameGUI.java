@@ -14,14 +14,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
-import edu.bjtu.tictactoe.client_side.windows.BeginGUI;
-import edu.bjtu.tictactoe.client_side.windows.RoomGUI;
 
-public class LanGUI extends Application {
+public class BeginGameGUI extends Application {
     String userName;
     String record;
 
-    public LanGUI(String name, String win) {
+    public BeginGameGUI(String name, String win) {
         userName = name;
         record = win;
     }
@@ -84,7 +82,7 @@ public class LanGUI extends Application {
 
 
         labelPane.setPadding(new Insets(200, 100, 200, 100));
-        scene.getStylesheets().add(BeginGUI.class.getResource("/style/beginCSS.css").toExternalForm());
+        scene.getStylesheets().add(BeginGameGUI.class.getResource("/style/beginCSS.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
 

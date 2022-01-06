@@ -11,7 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import edu.bjtu.tictactoe.client_side.component.MyButton;
 import edu.bjtu.tictactoe.client_side.component.NetGameButton;
-import edu.bjtu.tictactoe.client_side.windows.NetGameGUI;
+import edu.bjtu.tictactoe.client_side.windows.OnlineModeGUI;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;
@@ -28,13 +28,13 @@ public class Receive implements Runnable {
     private ArrayList<int[]> arrayListOfNetGameButton = new ArrayList<>();
     private int[] judge = new int[9];
     private int winner = -1;
-    private static ArrayList<NetGameButton> arrayListOfBlock = NetGameGUI.getButtonArrayList();
-    private GridPane gridPane = NetGameGUI.getGridPane();
+    private static ArrayList<NetGameButton> arrayListOfBlock = OnlineModeGUI.getButtonArrayList();
+    private GridPane gridPane = OnlineModeGUI.getGridPane();
     private int[] winArea = new int[9];
-    private Button turnNameLabel = NetGameGUI.getTurnNameLabel();
+    private Button turnNameLabel = OnlineModeGUI.getTurnNameLabel();
     private String name_first = "";
     private String name_second = "";
-    private Label turnLabel = NetGameGUI.getTurnLabel();
+    private Label turnLabel = OnlineModeGUI.getTurnLabel();
     private int won;
 
     public Receive(BufferedReader bufferedReader, PrintWriter printWriter, GridPane gridPane) {
@@ -122,7 +122,7 @@ public class Receive implements Runnable {
                         if (win) {
                             try {
                                 winArea[intArea] = winner;
-                                Label turnLabel = NetGameGUI.getTurnLabel();
+                                Label turnLabel = OnlineModeGUI.getTurnLabel();
                                 if (winner == 1) {
                                     arrayListOfBlock.get(intArea).setId("oPane");
                                 } else {
@@ -176,9 +176,9 @@ public class Receive implements Runnable {
                             can = false;
                         } else {
                             if (intUser == 1) {
-                                turnNameLabel.setStyle("-fx-background-image: url('/style/xturn.png');");
+                                turnNameLabel.setStyle("-fx-background-image: url('/image/xturn.png');");
                             } else {
-                                turnNameLabel.setStyle("-fx-background-image: url('/style/oturn.png');");
+                                turnNameLabel.setStyle("-fx-background-image: url('/image/oturn.png');");
                             }
 
 
@@ -261,7 +261,7 @@ public class Receive implements Runnable {
                 } else {
                     name_first = stringTokenizer.nextToken();
                     name_second = stringTokenizer.nextToken();
-                    turnNameLabel.setStyle("-fx-background-image: url('/style/oturn.png');");
+                    turnNameLabel.setStyle("-fx-background-image: url('/image/oturn.png');");
                 }
             } catch (Exception e) {
 
@@ -275,7 +275,7 @@ public class Receive implements Runnable {
             NetGameButton curNetGameButton = (NetGameButton) netGameButtonIterator.next();
             curNetGameButton.setStyle("-fx-border-style: solid inside;-fx-border-width:3;-fx-border-color: rgba(226,149,192,0);");
         }
-        turnNameLabel.setStyle("-fx-background-image: url('/style/null.png');");
+        turnNameLabel.setStyle("-fx-background-image: url('/image/null.png');");
 
     }
 

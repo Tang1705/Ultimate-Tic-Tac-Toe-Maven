@@ -7,9 +7,9 @@ package edu.bjtu.tictactoe.client_side.dao;
 
 import javafx.scene.layout.GridPane;
 import edu.bjtu.tictactoe.client_side.component.GameButton;
-import edu.bjtu.tictactoe.client_side.windows.LocalGameGUI;
+import edu.bjtu.tictactoe.client_side.windows.OfflineModeGUI;
 import edu.bjtu.tictactoe.client_side.component.NetGameButton;
-import edu.bjtu.tictactoe.client_side.windows.NetGameGUI;
+import edu.bjtu.tictactoe.client_side.windows.OnlineModeGUI;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -17,11 +17,11 @@ import java.util.Iterator;
 import java.util.StringTokenizer;
 
 public class NetOperation implements Operation {
-    private ArrayList<NetGameButton> arrayList = NetGameGUI.getButtonArrayList();
-    private static ArrayList<Integer[]> judge = new ArrayList<Integer[]>();
-    private static int[] very = NetGameButton.getWinAreaNum();
-    private BufferedReader in;
-    private PrintWriter out;
+    private final ArrayList<NetGameButton> arrayList = OnlineModeGUI.getButtonArrayList();
+    private static final ArrayList<Integer[]> judge = new ArrayList<Integer[]>();
+    private static final int[] very = NetGameButton.getWinAreaNum();
+    private final BufferedReader in;
+    private final PrintWriter out;
 
     public NetOperation(BufferedReader bufferedReader, PrintWriter printWriter) {
         in = bufferedReader;
@@ -46,7 +46,7 @@ public class NetOperation implements Operation {
 
             while (iterator.hasNext()) {
                 NetGameButton curGameButton = (NetGameButton) iterator.next();
-                if (LocalGameGUI.getWin()) {
+                if (OnlineModeGUI.getWin()) {
                     if (i == Integer.valueOf(num) - 1) {
                         if (!curGameButton.getWon()) {
                             Iterator anotherIterator = this.arrayList.iterator();
@@ -171,9 +171,9 @@ public class NetOperation implements Operation {
             winner = 4;
         }
 
-        GridPane gridPane = NetGameGUI.getGridPane();
+        GridPane gridPane = OnlineModeGUI.getGridPane();
         if (winner != -1) {
-            LocalGameGUI.setWin();
+            OnlineModeGUI.setWin();
             this.setSymbol("0-0");
             switch (winner) {
                 case 0:

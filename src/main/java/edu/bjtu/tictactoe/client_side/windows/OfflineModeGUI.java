@@ -5,7 +5,6 @@
 
 package edu.bjtu.tictactoe.client_side.windows;
 
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -19,9 +18,8 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import edu.bjtu.tictactoe.client_side.component.GameButton;
-import edu.bjtu.tictactoe.client_side.windows.BeginGUI;
 
-public class LocalGameGUI extends Application {
+public class OfflineModeGUI extends Application {
     private static ArrayList<GameButton> buttonArrayList = new ArrayList<GameButton>();
     private static GridPane gridPane;
     private static boolean win = true;
@@ -77,7 +75,7 @@ public class LocalGameGUI extends Application {
         primaryStage.getIcons().add(new Image("http://static.zybuluo.com/TangWill/du4235tohjaap56iakth6e32/icon.jpg"));
         gridPane.setPadding(new Insets(70.0D, 200.0D, 200.0D, 350.0D));
         primaryStage.setScene(scene);
-        scene.getStylesheets().add(Objects.requireNonNull(BeginGUI.class.getResource("/style/operationCSS.css")).toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(OfflineModeGUI.class.getResource("/style/operationCSS.css")).toExternalForm());
         primaryStage.show();
 
 

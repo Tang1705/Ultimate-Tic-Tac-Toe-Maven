@@ -20,9 +20,6 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
-import edu.bjtu.tictactoe.client_side.windows.BeginGUI;
-import edu.bjtu.tictactoe.client_side.windows.LocalGameGUI;
-import edu.bjtu.tictactoe.client_side.windows.RankGUI;
 
 public class MainGUI extends Application {
     public MainGUI() {
@@ -36,21 +33,21 @@ public class MainGUI extends Application {
         buttonPane.setVgap(30.0D);
         ColumnConstraints column = new ColumnConstraints(700.0D);
         buttonPane.getColumnConstraints().addAll(new ColumnConstraints[]{column});
-        Label singleButton = new Label("Single");
+        Label singleButton = new Label("Online Mode");
         singleButton.setId("choiceLabel");
         singleButton.setWrapText(true);
         singleButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
-                BeginGUI beginGUI = new BeginGUI();
+                SignInGUI beginGUI = new SignInGUI();
                 beginGUI.start(primaryStage);
             }
         });
 
-        Label doubleButton = new Label("Double");
+        Label doubleButton = new Label("Offline Mode");
         doubleButton.setId("choiceLabel");
         doubleButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
-                LocalGameGUI singleGameGUI = new LocalGameGUI();
+                OfflineModeGUI singleGameGUI = new OfflineModeGUI();
 
                 try {
                     singleGameGUI.start(primaryStage);
@@ -127,7 +124,7 @@ public class MainGUI extends Application {
         root.setCenter(buttonPane);
         primaryStage.getIcons().add(new Image("http://static.zybuluo.com/TangWill/cinm0c9yyyhzuf1d1wvj3mt1/icon.png"));
 //        System.err.println(getClass().getClassLoader().getResource("tictactoe/client_side/windows/beginCSS.css"));
-        scene.getStylesheets().add(BeginGUI.class.getResource("/style/beginCSS.css").toExternalForm());
+        scene.getStylesheets().add(MainGUI.class.getResource("/style/beginCSS.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

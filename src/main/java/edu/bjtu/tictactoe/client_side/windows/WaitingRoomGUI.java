@@ -15,20 +15,19 @@ import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import edu.bjtu.tictactoe.client_side.dao.PlayerNet;
-import edu.bjtu.tictactoe.client_side.windows.BeginGUI;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 
-public class WaitGUI extends Application {
+public class WaitingRoomGUI extends Application {
     private Stage stage = null;
     private String roomNum = "";
     private String username = "";
     private PlayerNet playerNet;
 
-    public WaitGUI(PlayerNet playerNet) {
+    public WaitingRoomGUI(PlayerNet playerNet) {
         this.playerNet = playerNet;
     }
 
@@ -45,7 +44,7 @@ public class WaitGUI extends Application {
         thread.start();
 
         Scene scene = new Scene(gridPane, 1280, 720);
-        scene.getStylesheets().add(BeginGUI.class.getResource("/style/beginCSS.css").toExternalForm());
+        scene.getStylesheets().add(WaitingRoomGUI.class.getResource("/style/beginCSS.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
 
