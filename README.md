@@ -14,7 +14,7 @@
 
 You can find details of the project from https://www.zybuluo.com/TangWill/note/1442929 .
 
-You can also download the ![jar file](https://github.com/Tang1705/Ultimate-Tic-Tac-Toe-Maven/blob/main/target/Ultimate-Tic-Tac-Toe-1.0-SNAPSHOT-jar-with-dependencies.jar).
+You can also download the <a href="https://github.com/Tang1705/Ultimate-Tic-Tac-Toe-Maven/blob/main/target/Ultimate-Tic-Tac-Toe-1.0-SNAPSHOT-jar-with-dependencies.jar">jar file</a>.
 
 This repository is based on maven.
 
@@ -61,12 +61,9 @@ Ultimate tic-tac-toe is significantly more complex than most other variations of
  3. **Winning the game:** Due to the rules of ultimate tic-tac-toe, the global board is never directly affected. It is only governed by actions that occur in local boards. This means that each local move played is not intended to win the local board, but to win the global board. Local wins are not valuable if they cannot be used to win the global board—in fact, it may be strategic to sacrifice a local board to your opponent in order to win a more important local board yourself. This added layer of complexity makes it harder for humans to analyze the relative importance and significance of moves, and consequently harder to play well.
 
 
-## System manual
-### 4.1 Icon
+## UI Dedign
 
- <img alt="Ultimate Tic-Tac-To " src="http://static.zybuluo.com/TangWill/cinm0c9yyyhzuf1d1wvj3mt1/icon.png" width="200px" height="200px" />
-
-### 4.2 MainGUI
+### MainGUI
 
 ![maingui.PNG-1273.7kB][30]
 
@@ -101,7 +98,7 @@ After playing a little, you will see that, even though you could win a small boa
 
 A draw board will not count for either X, nor O.
 
-### 4.3 LocalGameGUI
+### OfflineGameGUI
 
 ![LocalGameGUI.PNG-1672.2kB][31]
 
@@ -115,7 +112,7 @@ After you win the game in the small board or win the game finally, the window wi
 
 Besides these, you will enjoy the certain music when you play the game, which is called BGM.
 
-### 4.4 SingleGameGUI
+### OnlineGameGUI
 If you choose to press the button named single, you can play with your friend who is using the same WLAN with you.
 
 But first, you need to log in a new account or sign up if you have had a account.
@@ -152,20 +149,10 @@ If one of two players wins the game, the winner's name will appear at the bottom
 
 ![NetGmeGUI11.PNG-1769kB][41]
 
-### 4.5 Other Settings
+### Other Settings
 I haven't show some GUI, like GUI of logging in 、rule dialog and rank GUI.
 
 But it maybe similar with those I have showed with you or it's so easy to make it clear for you that I won't explain them in detail.
-
-## Chapter 5 Innovation
-Just as I said before, I use some new technologies in this project, which are JavaFX and JDBC.Of course, I may be not very familar with them and take advantages of them well. But, I learn something new and important when I learn and use them.
-
-Something else I want to stress is that ***the project is finished by mysely compeletely,no copies,no reference in source code.*** I try my best to complete this game. Finally, the lines of the code are up to 3000+.
-
-![satistics.PNG-278.2kB][42]
-
-Of course, I need to improved it in some functions. Because of the limit of the time,a few of founctions are not implemented well and there are some modes of the game I need to implemented.
-And I will write them down later.
 
   [1]: http://static.zybuluo.com/TangWill/eihl6ig9l86r2jfx547vm2mj/1920px-Tic-tac-toe-game-1.svg.png
   [2]: http://static.zybuluo.com/TangWill/z0cch0waqrt0758wa7y2fat8/Incomplete_Ultimate_Tic-Tac-Toe_Board.png
