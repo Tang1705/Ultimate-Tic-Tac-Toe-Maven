@@ -154,3 +154,59 @@ If one of two players wins the game, the winner's name will appear at the bottom
 
 ### 4.5 Other Settings
 I haven't show some GUI, like GUI of logging in 、rule dialog and rank GUI.
+
+But it maybe similar with those I have showed with you or it's so easy to make it clear for you that I won't explain them in detail.
+
+## Chapter 5 Innovation
+Just as I said before, I use some new technologies in this project, which are JavaFX and JDBC.Of course, I may be not very familar with them and take advantages of them well. But, I learn something new and important when I learn and use them.
+
+Something else I want to stress is that ***the project is finished by mysely compeletely,no copies,no reference in source code.*** I try my best to complete this game. Finally, the lines of the code are up to 3000+.
+
+![satistics.PNG-278.2kB][42]
+
+Of course, I need to improved it in some functions. Because of the limit of the time,a few of founctions are not implemented well and there are some modes of the game I need to implemented.
+And I will write them down later.
+
+  [1]: http://static.zybuluo.com/TangWill/eihl6ig9l86r2jfx547vm2mj/1920px-Tic-tac-toe-game-1.svg.png
+  [2]: http://static.zybuluo.com/TangWill/z0cch0waqrt0758wa7y2fat8/Incomplete_Ultimate_Tic-Tac-Toe_Board.png
+  [3]: http://static.zybuluo.com/TangWill/4lg5jaihji8ymk7cf70dztq5/structure.png
+  [4]: http://static.zybuluo.com/TangWill/t5gbesjdd0sm74xyzuvtfl2t/%E6%8D%95%E8%8E%B7.PNG
+  [5]: http://static.zybuluo.com/TangWill/0lharis80mo9tpvymtridhi1/TestServerUml.PNG
+  [6]: http://static.zybuluo.com/TangWill/viv3tg484gss7jw7ugeaqx57/ServerThread.PNG
+  [7]: http://static.zybuluo.com/TangWill/z6le9nd3uu5qhsw6ircrvnwv/ServerOperationUML.PNG
+  [8]: http://static.zybuluo.com/TangWill/mipwvrslqilh5siopah8pa66/RoomManagerGUI.PNG
+  [9]: http://static.zybuluo.com/TangWill/5hsk6eesrhyl25t5ekwm8jfy/DataBaseUML.PNG
+  [10]: http://static.zybuluo.com/TangWill/1qkdevf8oq316az3143ce6l9/BeginGUIUML.PNG
+  [11]: http://static.zybuluo.com/TangWill/7pc44o4u66tanytlqknjbtqo/LanGUI.PNG
+  [12]: http://static.zybuluo.com/TangWill/q9ijl3v6w3ojxfw5is090hjl/LocalGameGUIUML.PNG
+  [13]: http://static.zybuluo.com/TangWill/132nnwd5k5fr7uz2kkx3xxh9/LogInGUIUML.PNG
+  [14]: http://static.zybuluo.com/TangWill/2ga9qj49ilyvk7a5ptzgdco0/MainGUIUML.PNG
+  [15]: http://static.zybuluo.com/TangWill/dimgw3uk8hv5a2rska972umm/MetGameGUIUML.PNG
+  [16]: http://static.zybuluo.com/TangWill/2tyf28bzxi4srsgz2nvynhf4/RankGUIUML.PNG
+  [17]: http://static.zybuluo.com/TangWill/htvegyf4ppxb2opt83olpwpg/RoomGUIUML.PNG
+  [18]: http://static.zybuluo.com/TangWill/recbfurqamsw7zkhcocn9wye/WaitGUIUML.PNG
+  [19]: http://static.zybuluo.com/TangWill/qvh127ppxzn4zjh8w45jfczp/LocalOperationUML.PNG
+  [20]: http://static.zybuluo.com/TangWill/v7dghpqiqohz9w7tj2autucc/NetOperationUML.PNG
+  [21]: http://static.zybuluo.com/TangWill/bj51shf3fyx99l1bm5o3dgyh/OperationUML.PNG
+  [22]: http://static.zybuluo.com/TangWill/3vwqbq9blvu0hd5ak15d8naw/PlayerUML.PNG
+  [23]: http://static.zybuluo.com/TangWill/md2rcd7u26lpe4xgx7aqg87d/PlayerNet.PNG
+  [24]: http://static.zybuluo.com/TangWill/q92ps6ot21xb31ecwh091v03/RankUML.PNG
+  [25]: http://static.zybuluo.com/TangWill/kb7ng9i586iezjvyq6qvaosp/ReceiveUML.PNG
+  [26]: http://static.zybuluo.com/TangWill/v2n98bbdmy2ncw1tz61y73x1/MybuttonUML.PNG
+  [27]: http://static.zybuluo.com/TangWill/kc58iinsnar7km6x87hul0g9/GameButton.PNG
+  [28]: http://static.zybuluo.com/TangWill/ynk86gcwlsezwhl0e5th5xbd/NetGamebuttonUTM.PNG
+  [29]: http://static.zybuluo.com/TangWill/cinm0c9yyyhzuf1d1wvj3mt1/icon.png
+  [30]: http://static.zybuluo.com/TangWill/uftv4l84qfdg42bynwji6c7h/maingui.PNG
+  [31]: http://static.zybuluo.com/TangWill/fua4nr4v5ike6t6rgtfog8e7/LocalGameGUI.PNG
+  [32]: http://static.zybuluo.com/TangWill/5gm459o8blcuqf6vefjlthr5/LocalGameGUI1.PNG
+  [33]: http://static.zybuluo.com/TangWill/e6zesnleug7u3b4z7ta2mr5y/LocalGameGUI2.PNG
+  [34]: http://static.zybuluo.com/TangWill/httdgqs7vehodn6vytd73o1c/SingleGameGUI1.PNG
+  [35]: http://static.zybuluo.com/TangWill/e660889edhugyolsnd14g046/NetGameGUI2.PNG
+  [36]: http://static.zybuluo.com/TangWill/ifbytd9zr0xegqb0v9dsruts/NetGameGUI3.PNG
+  [37]: http://static.zybuluo.com/TangWill/6fskm6eb5apisz2uglhows12/NetGameGUI4.PNG
+  [38]: http://static.zybuluo.com/TangWill/ypr3e2w4v7i5w7ztcf4l3y0i/NetGameGUI5.PNG
+  [39]: http://static.zybuluo.com/TangWill/h1ia92rkh1t4rq39sjigenq6/NetGameGUI6.PNG
+  [40]: http://static.zybuluo.com/TangWill/mokni0u2tuwz5effgcfw6h8p/NetGameGUI7.PNG
+  [41]: http://static.zybuluo.com/TangWill/6w9bbzglevt7g749q7guulnm/NetGmeGUI11.PNG
+  [42]: http://static.zybuluo.com/TangWill/0f1clbmnt8nvzt6mn8cza3af/satistics.PNG
+  [43]: http://static.zybuluo.com/TangWill/nuwg20mzi2p4dgvudqvj0xim/1920px-Tic-tac-toe-game-1.svg.png
